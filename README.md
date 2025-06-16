@@ -37,3 +37,13 @@ This is the backend for my Airbnb Clone project. It’s built to handle everythi
 **Docker**: Containerization tool for consistent development and deployment environments.
 
 **CI/CD Pipelines**: Automated pipelines for testing and deploying code changes.
+
+## Team Roles
+
+**Backend Developer**: Responsible for implementing API endpoints, database schemas, and business logic.
+
+**Database Administrator**: Manages database design, indexing, and optimizations.
+
+**DevOps Engineer**: Handles deployment, monitoring, and scaling of the backend services.
+
+**QA Engineer**: Ensures the backend functionalities are thoroughly tested and meet quality standards.
