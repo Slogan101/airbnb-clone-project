@@ -153,6 +153,105 @@ This is the backend for my Airbnb Clone project. It’s built to handle everythi
 - Each image **belongs to a property**
 
 
+## Feature Breakdown
+
+
+## 1. 📄 API Documentation
+
+### ✅ OpenAPI Standard
+- The backend APIs are documented using the **OpenAPI standard** to ensure clarity and ease of integration with frontend and third-party services.
+
+### ⚙️ Django REST Framework
+- Provides a comprehensive **RESTful API** for handling CRUD operations on user, property, booking, and review data.
+
+### 🔍 GraphQL Support
+- Enables a flexible and efficient query mechanism for interacting with the backend.
+- Ideal for frontend apps that require dynamic querying and minimal overfetching.
+
+---
+
+## 2. 🔐 User Authentication
+
+### 📍 Endpoints:
+- `POST /users/` – Register a new user
+- `GET /users/{user_id}/` – Retrieve user profile
+
+### 🛠️ Features:
+- User registration
+- Login & token-based authentication (e.g., JWT)
+- Profile management
+
+---
+
+## 3. 🏘️ Property Management
+
+### 📍 Endpoints:
+- `GET /properties/` – List all properties
+- `POST /properties/` – Create a new property
+- `GET /properties/{property_id}/` – Retrieve a specific property
+- `PUT /properties/{property_id}/` – Update property details
+- `DELETE /properties/{property_id}/` – Delete a property
+
+### 🛠️ Features:
+- CRUD operations on property listings
+- Linked to the hosting user
+
+---
+
+## 4. 🗓️ Booking System
+
+### 📍 Endpoints:
+- `POST /bookings/` – Create a new booking
+- `GET /bookings/` – View all bookings (user-specific)
+- `GET /bookings/{booking_id}/` – Retrieve a specific booking
+- `PUT /bookings/{booking_id}/` – Update booking details
+- `DELETE /bookings/{booking_id}/` – Cancel a booking
+
+### 🛠️ Features:
+- Reservation creation and management
+- Check-in and check-out tracking
+- Prevent overlapping bookings
+
+---
+
+## 5. 💳 Payment Processing
+
+### 📍 Endpoint:
+- `POST /payments/` – Process a payment for a booking
+
+### 🛠️ Features:
+- Secure payment handling (e.g., via Stripe/PayPal)
+- Payment tracking and status updates
+- Linked to bookings and users
+
+---
+
+## 6. 🌟 Review System
+
+### 📍 Endpoints:
+- `GET /reviews/` – List all reviews
+- `POST /reviews/` – Add a new review
+- `GET /reviews/{review_id}/` – View a specific review
+- `PUT /reviews/{review_id}/` – Update a review
+- `DELETE /reviews/{review_id}/` – Delete a review
+
+### 🛠️ Features:
+- Users can leave reviews for properties they've stayed in
+- Ratings and comments visible on property pages
+
+---
+
+## 7. 🧠 Database Optimizations
+
+### ⚡ Indexing:
+- Indexes on frequently queried fields such as `user_id`, `property_id`, and `booking dates` to improve query performance.
+
+### 🚀 Caching:
+- Implement caching strategies (e.g., Redis) for:
+  - Frequently accessed property listings
+  - User sessions and auth tokens
+  - Recent reviews and search results
+
 
 
 
